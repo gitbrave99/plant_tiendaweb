@@ -24,9 +24,10 @@
                     <div class="d-flex justify-content-center">
                         <div class="navbar">
                             <div class="form-inline">
-                                <a class="btn" href="carrito.html" data-toggle="tooltip" data-placement="bottom" title="12">
+                                <a class="btn" href="carrito.html" data-toggle="tooltip" data-placement="bottom"
+                                    title="12">
                                     <i class="bi bi-cart4 text-dark"></i></a>
-                                <a class="btn" data-toggle="tooltip" data-placement="bottom" title="12">
+                                <a class="btn" data-toggle="modal" data-target="#modalLoginUser">
                                     <i class="bi bi-person text-primary"></i></a>
                                 <a class="btn" data-toggle="tooltip" data-placement="bottom" title="12">
                                     <i class="bi bi-suit-heart text-danger"></i></a>
@@ -81,6 +82,203 @@
             </div>
         </header>
     </div>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLoginUser" tabindex="-1" aria-labelledby="modalLoginUserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLoginUserLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation p-4" novalidate>
+                        <div class="form-row ">
+                            <div class="col-md-12 mb-3">
+                                <label for="valusername">Nombre de Usuario</label>
+                                <input type="text" class="form-control" id="valusername" value="Mark" required>
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="valpassword">Contraseña</label>
+                                <input type="password" class="form-control" id="valpassword" value="Mark" required>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="remenberuserval">
+                                <label class="form-check-label" for="remenberuserval">
+                                    Recordar nombre de usuario
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-info  btn-lg btn-block" type="submit">Login</button>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="gridCheck">
+                                No tienes cuenta? <a href="#modalRegisteruser" data-toggle="modal" data-target="#modalRegisteruser"
+                                    data-dismiss="modal">Sign Up</a>
+                            </label>
+                        </div>
+                    </form>
+
+                    <script>
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                var forms = document.getElementsByClassName('needs-validation');
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button> -->
+
+                    <footer class="contenedor">
+                        <div class="redes-sociales">
+                            <div class="contenedor-icono">
+                                <a href="http://www.twitter.com/falconmasters" target="_blank" class="twitter">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                            </div>
+                            <div class="contenedor-icono">
+                                <a href="http://www.facebook.com/falconmasters" target="_blank" class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="contenedor-icono">
+                                <a href="http://www.instagram.com" target="_blank" class="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="modalRegisteruser" tabindex="-1" aria-labelledby="modalRegisteruserLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegisteruserLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <form class="needs-validation " novalidate>
+                                    <div class="form-group">
+                                        <!-- <div class="col-md-12 mb-3"> -->
+                                        <label for="valusernamesp">Username</label>
+                                        <input type="text" class="form-control" id="valusernamesp" value="Mark"
+                                            required>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <div class="col-md-12 mb-3"> -->
+                                        <label for="valemailregister">E-mail</label>
+                                        <input type="email" class="form-control" id="valemailregister" required>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <div class="col-md-12 mb-3"> -->
+                                        <label for="valpassregiser">Password</label>
+                                        <input type="password" class="form-control" id="valpassregiser" value="Mark"
+                                            required>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <div class="col-md-12 mb-3"> -->
+                                        <label for="valpassregister2">Confirm Password</label>
+                                        <input type="password" class="form-control" id="valpassregister2" value="Mark"
+                                            required>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-info  btn-lg btn-block" type="submit">Sign
+                                            Up</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Ya tienes cuenta? <a href="#modalLoginUser" data-toggle="modal"
+                                                data-target="#modalLoginUser" data-dismiss="modal">Login</a>
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <script>
+                                    (function () {
+                                        'use strict';
+                                        window.addEventListener('load', function () {
+                                            var forms = document.getElementsByClassName('needs-validation');
+                                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                                form.addEventListener('submit', function (event) {
+                                                    if (form.checkValidity() === false) {
+                                                        event.preventDefault();
+                                                        event.stopPropagation();
+                                                    }
+                                                    form.classList.add('was-validated');
+                                                }, false);
+                                            });
+                                        }, false);
+                                    })();
+                                </script>
+                            </div>
+                        </div>
+                        <div class="col-md-6 " id="nettosignup">
+                            <div class="row mx-auto  row-cols-md-3 py-5 mt-4 pt-4">
+                                <div class="col col-12 col-md-12 mb-4 mt-4">
+                                    <button class="btn btn-info btn-lg btn-block">Sign Up with Facebook</button>
+                                </div>
+
+                                <div class="col col-12 col-md-12 mb-4 mt-4">
+                                    <button class="btn btn-warning btn-lg btn-block">Sign Up with Google</button>
+                                </div>
+
+                                <div class="col col-12 col-md-12 mb-4 mt-4">
+                                    <button class="btn btn-danger btn-lg btn-block">Sign Up with Instagram</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
